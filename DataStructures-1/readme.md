@@ -102,14 +102,14 @@ The circular queue work as follows:
 
 initially, set value of FRONT and REAR to -1
 
-1. **Enqueue Operation**:
+#### 1. Enqueue Operation:
 
 1. check if the queue is full
 2. for the first element, set value of FRONT to 0
 3. circularly increase the REAR index by 1 (i.e. if the rear reaches the end, next it would be at the start of the queue)
 4. add the new element in the position pointed to by REAR
 
-2. **Dequeue Operation**:
+#### 2. Dequeue Operation:
 
 1. check if the queue is empty
 2. return the value pointed by FRONT
