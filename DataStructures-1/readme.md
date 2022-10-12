@@ -157,10 +157,10 @@ Hence, we will be using the heap data structure to implement the priority queue 
 A comparative analysis of different implementations of priority queue is given below.
 
 ```
-Operations	        peek	    insert	     delete
+Operations	          peek	    insert	       delete
 
-Linked List	        O(1)	   O(n)	           O(1)
-Binary Heap	        O(1)	   O(log n)	       O(log n)
-Binary Search Tree	O(1)	   O(log n)	       O(log n)
+Linked List	          O(1)	   O(n)	           O(1)
+Binary Heap	          O(1)	   O(log n)	       O(log n)
+Binary Search Tree  	O(1)	   O(log n)	       O(log n)
 
 ```
