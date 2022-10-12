@@ -125,5 +125,40 @@ Case 2: FRONT = REAR + 1
 The second case happens when REAR starts from 0 due to circular increment and when its value is just 1 less than FRONT, the queue is full.
 
 
+### Circular Queue Complexity Analysis
+The complexity of the enqueue and dequeue operations of a circular queue is O(1) for (array implementations).
 
+### Applications of Circular Queue
+1. CPU scheduling
+2. Memory management
+3. Traffic Management
 
+## Priority Queue
+A priority queue is a special type of queue in which each element is associated with a priority value. And, elements are served on the basis of their priority. That is, higher priority elements are served first.
+
+However, if elements with the same priority occur, they are served according to their order in the queue.
+
+Assigning Priority Value
+
+Generally, the value of the element itself is considered for assigning the priority. For example,
+
+The element with the highest value is considered the highest priority element. However, in other cases, we can assume the element with the lowest value as the highest priority element.
+
+### Difference between Priority Queue and Normal Queue
+
+In a queue, the first-in-first-out rule is implemented whereas, in a priority queue, the values are removed on the basis of priority. The element with the highest priority is removed first.
+
+### Priority queue can be implemented using an array, a linked list, a heap data structure, or a binary search tree. Among these data structures, heap data structure provides an efficient implementation of priority queues.
+
+Hence, we will be using the heap data structure to implement the priority queue in this tutorial. A max-heap is implemented in the following operations. If you want to learn more about it, please visit max-heap and min-heap.
+
+A comparative analysis of different implementations of priority queue is given below.
+
+```
+Operations	        peek	    insert	     delete
+
+Linked List	        O(1)	   O(n)	      O(1)
+Binary Heap	        O(1)	   O(log n)	  O(log n)
+Binary Search Tree	O(1)	   O(log n)	  O(log n)
+
+```
