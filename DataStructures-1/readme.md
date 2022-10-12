@@ -79,4 +79,49 @@ The complexity of enqueue and dequeue operations in a queue using an array is O(
 4. Call Center phone systems use Queues to hold people calling them in order.
 
 
+### Types of Queue
+
+### 1. Circular Queue:
+A circular queue is the extended version of a regular queue where the last element is connected to the first element. Thus forming a circle-like structure.
+
+### How Circular Queue Works
+Circular Queue works by the process of circular increment i.e. when we try to increment the pointer and we reach the end of the queue, we start from the beginning of the queue.
+
+Here, the circular increment is performed by modulo division with the queue size. That is,
+
+```
+if REAR + 1 == 5 (overflow!), REAR = (REAR + 1)%5 = 0 (start of queue)
+
+```
+#### Circular Queue Operations
+The circular queue work as follows:
+
+1. two pointers FRONT and REAR
+2. `FRONT` track the first element of the queue
+3. `REAR` track the last elements of the queue
+
+initially, set value of FRONT and REAR to -1
+
+1. **Enqueue Operation**
+1. check if the queue is full
+2. for the first element, set value of FRONT to 0
+3. circularly increase the REAR index by 1 (i.e. if the rear reaches the end, next it would be at the start of the queue)
+4. add the new element in the position pointed to by REAR
+
+2. **Dequeue Operation**
+1. check if the queue is empty
+2. return the value pointed by FRONT
+3. circularly increase the FRONT index by 1
+4. for the last element, reset the values of FRONT and REAR to -1
+
+However, the check for full queue has a new additional case:
+```
+Case 1: FRONT = 0 && REAR == SIZE - 1
+Case 2: FRONT = REAR + 1
+
+```
+The second case happens when REAR starts from 0 due to circular increment and when its value is just 1 less than FRONT, the queue is full.
+
+
+
 
